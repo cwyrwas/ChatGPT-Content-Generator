@@ -8,7 +8,7 @@ from moviepy.editor import *
 
 # For the config please go here:
 # https://github.com/acheong08/ChatGPT/wiki/Setup
-session_token = "ADD YOUR TOKEN HERE."
+session_token = "ADD YOUR TOKEN HERE"
 
 topics = ["DIY craft ideas",    "Hacks and tips for everyday life",    "Comedy sketches and skits",    "Dance challenges and routines",    "Life hacks for students",    "Beauty and makeup tips",    "Travel vlogs and destination guides",    "Relationship advice and tips",    "Cooking and recipe videos",    "DIY fashion and style tips",    "Comedy challenges and games",    "Fitness and workout routines",    "Life hacks for parents",    "Pranks and practical jokes",    "DIY home decor ideas",    "Life hacks for the workplace",    "Animal videos and pet tricks",    "Comedy monologues and stand-up",    "DIY beauty and skincare products",    "Travel hacks and packing tips",    "Relationship advice for couples",    "Food challenges and taste tests",    "DIY project ideas for kids",    "Comedy duets and lip sync battles",    "Fitness challenges and workouts",    "Life hacks for saving money",    "Animal videos and pet care tips",    "Comedy parodies and satire",    "DIY home organization ideas",    "Life hacks for saving time",    "Travel vlogs and adventure stories",    "Relationship advice for singles",    "Cooking challenges and food experiments",    "DIY gift ideas and tutorials",    "Comedy interviews and Q&A sessions",    "Fitness tips and healthy eating advice",    "Life hacks for everyday problems",    "Animal videos and pet adoptions"]
 video_tones = ["funny", "informative", "romantic", "motivational", "inspirational", "educational", "scary", "sad", "happy", "angry"]
