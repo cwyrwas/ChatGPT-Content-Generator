@@ -1,0 +1,8 @@
+The script for this video was generated using ChatGPT and Python. The images are automatically fetched from Unsplash and the voice-over is generated using PyTTsX3. The video is then created with MoviePy.
+#ai
+#generated
+#artificialintelligence
+#chatgpt
+#chatbot
+#fyp
+#python

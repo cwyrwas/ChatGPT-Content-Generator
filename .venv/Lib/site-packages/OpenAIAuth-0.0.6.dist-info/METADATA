@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: OpenAIAuth
+Version: 0.0.6
+Summary: OpenAI Authentication Reverse Engineered
+Home-page: https://github.com/acheong08/OpenAIAuth
+Author: Rawand Ahmed Shaswar and Antonio Cheong
+Author-email: acheong@student.dalat.org
+License: GNU General Public License v2.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: tls-client
+
+# OpenAIAuth
+OpenAI Authentication Library for ChatGPT
+
+# Credits
+Thank you to:
+- [rawandahmad698](https://github.com/rawandahmad698)
+for the reverse engineering of the protocol
+- [FlorianREGAZ](https://github.com/FlorianREGAZ)
+for the TLS Client
