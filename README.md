@@ -1,8 +1,8 @@
 # chatgpt content generator
  Uses Python to automatically generate TikTok videos/short-form content using ChatGPT.
 
- ## Installation
- Make sure you have Python 3+ installed, then simply clone this repository.
+ ## Installation / Requirements
+ Make sure you have Python 3+ and Chrome installed, then simply clone this repository.
 
  ## Getting Started
  To get started, you need to log in to ChatGPT and get your `__Secure-next-auth.session-token` cookie value. You can do this by logging in to ChatGPT and then going to the [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) and going to the Application tab. Then, go to the Cookies section and copy the value of the `__Secure-next-auth.session-token` cookie.
