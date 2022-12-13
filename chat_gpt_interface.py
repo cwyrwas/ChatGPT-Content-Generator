@@ -5,26 +5,26 @@ def get_video_script(token, video_topic, tone = "funny", length = "60"):
     # For the config please go here:
     # https://github.com/acheong08/ChatGPT/wiki/Setup
     config = { "session_token": token }
-    prompt = "Write me a " + length + " second TikTok video script about " + video_topic 
+    prompt = "Write me a " + length + " second TikTok video script about " + video_topic + " with a " + tone + " "
     
     if tone == "funny":
-        prompt += " with a comedic tone. Please include a spefific punchline and a joke."
+        prompt += "Please include a specific punchline and a joke."
     elif tone == "informative":
-        prompt += " with an informative tone. Please include a speficic fact and a tip."
+        prompt += " Please include a specific fact and a tip."
     elif tone == "romantic":
-        prompt += " with a romantic tone. Please include a spefific compliment and a love quote."
+        prompt += "Please include a specific compliment and a love quote."
     elif tone == "motivational":
-        prompt += " with a motivational tone. Please include a motivational quote from a well-liked personality and a wellness tip."
+        prompt += "Please include a motivational quote from a well-liked personality and a wellness tip."
     elif tone == "inspirational":
-        prompt += " with an inspirational tone. Please include an inspiring quote from a celebrity and a tip about how to achieve your dreams."
+        prompt += "Please include an inspiring quote from a celebrity and a tip about how to achieve your dreams."
     elif tone == "educational":
-        prompt += " with an educational tone. Please include a specific fact and a tip about how to learn more about" + video_topic + "."
+        prompt += "Please include a specific fact and a tip about how to learn more about " + video_topic + "."
     elif tone == "scary":
-        prompt += " with a scary tone. Please include a specific scary fact and a scary quote from someone who is not well-liked in the eyes of the public."
+        prompt += "Please include a specific scary fact and a scary quote from someone who is not well-liked in the eyes of the public."
     elif tone == "sad":
-        prompt += " with a sad tone. Please include a sad fact about " + video_topic + " and a sad quote from a well-liked celebrity or personality."
+        prompt += "Please include a sad fact about " + video_topic + " and a sad quote from a well-liked celebrity or personality."
     elif tone == "happy":
-        prompt += " with a happy tone. Please include a happy fact about " + video_topic + " and a happy quote from a well-liked personality."
+        prompt += "Please include a happy fact about " + video_topic + " and a happy quote from a well-liked personality."
     elif tone == "angry":
         prompt += " with an angry tone. Please include a fact that most people would generally consider to be frustrating about " + video_topic + "."
     

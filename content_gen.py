@@ -1,5 +1,5 @@
 import os, requests, random,  lxml, re, json, urllib.request
-from helper_functions import slugify, make_dir_if_not_exists
+from helper_functions import has_selected_yes, slugify, make_dir_if_not_exists
 from image_scraper import get_images
 from chat_gpt_interface import get_video_script, save_script
 from tts_converter import save_audio
@@ -10,13 +10,28 @@ from moviepy.editor import *
 # https://github.com/acheong08/ChatGPT/wiki/Setup
 session_token = "ADD YOUR TOKEN HERE"
 
-topics = ["DIY craft ideas",    "Hacks and tips for everyday life",    "Comedy sketches and skits",    "Dance challenges and routines",    "Life hacks for students",    "Beauty and makeup tips",    "Travel vlogs and destination guides",    "Relationship advice and tips",    "Cooking and recipe videos",    "DIY fashion and style tips",    "Comedy challenges and games",    "Fitness and workout routines",    "Life hacks for parents",    "Pranks and practical jokes",    "DIY home decor ideas",    "Life hacks for the workplace",    "Animal videos and pet tricks",    "Comedy monologues and stand-up",    "DIY beauty and skincare products",    "Travel hacks and packing tips",    "Relationship advice for couples",    "Food challenges and taste tests",    "DIY project ideas for kids",    "Comedy duets and lip sync battles",    "Fitness challenges and workouts",    "Life hacks for saving money",    "Animal videos and pet care tips",    "Comedy parodies and satire",    "DIY home organization ideas",    "Life hacks for saving time",    "Travel vlogs and adventure stories",    "Relationship advice for singles",    "Cooking challenges and food experiments",    "DIY gift ideas and tutorials",    "Comedy interviews and Q&A sessions",    "Fitness tips and healthy eating advice",    "Life hacks for everyday problems",    "Animal videos and pet adoptions"]
-video_tones = ["funny", "informative", "romantic", "motivational", "inspirational", "educational", "scary", "sad", "happy", "angry"]
+user_is_providing_topic = input("Would you like to provide a topic for the video? (y/n) ")
 
+if has_selected_yes(user_is_providing_topic):
+    video_topic = input("What topic would you like to write about? ")
+else: 
+    topics = ["DIY craft ideas",    "Hacks and tips for everyday life",    "Comedy sketches and skits",    "Dance challenges and routines",    "Life hacks for students",    "Beauty and makeup tips",    "Travel vlogs and destination guides",    "Relationship advice and tips",    "Cooking and recipe videos",    "DIY fashion and style tips",    "Comedy challenges and games",    "Fitness and workout routines",    "Life hacks for parents",    "Pranks and practical jokes",    "DIY home decor ideas",    "Life hacks for the workplace",    "Animal videos and pet tricks",    "Comedy monologues and stand-up",    "DIY beauty and skincare products",    "Travel hacks and packing tips",    "Relationship advice for couples",    "Food challenges and taste tests",    "DIY project ideas for kids",    "Comedy duets and lip sync battles",    "Fitness challenges and workouts",    "Life hacks for saving money",    "Animal videos and pet care tips",    "Comedy parodies and satire",    "DIY home organization ideas",    "Life hacks for saving time",    "Travel vlogs and adventure stories",    "Relationship advice for singles",    "Cooking challenges and food experiments",    "DIY gift ideas and tutorials",    "Comedy interviews and Q&A sessions",    "Fitness tips and healthy eating advice",    "Life hacks for everyday problems",    "Animal videos and pet adoptions"]
+    video_topic = random.choice(topics)
 
-video_topic = random.choice(topics)
-video_tone = random.choice(video_tones)
-video_length = str(random.randint(60, 90))
+user_is_providing_tone = input("Would you like to provide a tone for the video? (y/n) ")
+
+if has_selected_yes(user_is_providing_tone):
+    video_tone = input("What tone would you like to write about? ")
+else:
+    video_tones = ["funny", "informative", "romantic", "motivational", "inspirational", "educational", "scary", "sad", "happy", "angry"]
+    video_tone = random.choice(video_tones)
+
+user_is_specifying_length = input("Would you like to specify the length of the video? (y/n) ")
+
+if has_selected_yes(user_is_specifying_length):
+    video_length = input("How long should the video be? (in seconds) ")
+else:
+    video_length = str(random.randint(60, 90))
 
 print('Topic: ' + video_topic)
 print('Tone: ' + video_tone)

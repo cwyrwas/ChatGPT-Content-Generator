@@ -1,5 +1,11 @@
 import unicodedata, re, os
 
+def has_selected_yes(user_input):
+    """
+    Returns True if the user has selected yes.
+    """
+    return user_input == "y" or user_input == "Y" or user_input == "yes" or user_input == "Yes" or user_input == "YES"
+
 def slugify(value):
     """
     Normalizes string, converts to lowercase, removes non-alpha characters, and converts spaces to hyphens.
@@ -20,3 +26,4 @@ def make_dir_if_not_exists(current_working_dir):
         os.makedirs(current_working_dir + "/script")
         os.makedirs(current_working_dir + "/audio")
         os.makedirs(current_working_dir + "/video")
+

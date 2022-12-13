@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 
 def get_images(topic_slug, current_working_dir, num_images = 10):
     
-    # This is the URL for the Google Images search page
+    # This is the URL for the Unsplash search page
     url = "https://unsplash.com/s/photos/" + topic_slug
 
     # Send an HTTP request to the URL and store the response
