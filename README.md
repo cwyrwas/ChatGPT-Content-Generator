@@ -33,5 +33,8 @@ content/diy-craft-ideas/
 ```
 Once the script has been saved, it gets stored into a text file in the subdirectory. Additionally, 10 images are then scraped from Unsplash using `image_scraper.py`. Finally, we use `pyttsx3` to generate an audio file from the script. The audio file is then saved in the `audio` directory. To build the video, `content_gen.py` uses `moviepy` to parse the video's /images/ directory. It creates an ImageCollection to function as a slideshow. Lastly, the audio file is added to the video and the video is saved in the `video` directory.
 
+## How can I run this script?
+You can run this script by simply running `python content_gen.py` in the root directory of the project. This will generate your video and save it to the `content` directory. You can then use the video however you want.
+
 ## Notes:
 This is highly experimental, and there is a solid chance that this will break at some point given that ChatGPT is actively changing on a day-to-day basis. I'm not responsible for anything in regards to your OpenAI account resulting from using this script. Use at your own risk.
